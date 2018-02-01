@@ -36,8 +36,6 @@
             android:id="@+id/desc"
             android:layout_marginTop="10dp"
             android:textColor="#666666"
-            android:ellipsize="end"
-            android:maxLines="1"
             android:textSize="15sp"
             tools:text="老而不死是为贼"
             android:layout_width="wrap_content"

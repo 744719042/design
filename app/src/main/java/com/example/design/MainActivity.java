@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button tvBtn;
     private Button recyclerBtn;
     private Button gridButton;
+    private Button staggerButton;
     private Button contraintBtn;
     private Button coordinatorBtn;
 
@@ -21,11 +22,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvBtn = (Button) findViewById(R.id.textview);
         recyclerBtn = (Button) findViewById(R.id.recyclerView);
         gridButton = (Button) findViewById(R.id.gridLayout);
+        staggerButton = (Button) findViewById(R.id.staggerView);
         contraintBtn = (Button) findViewById(R.id.constraint);
         coordinatorBtn = (Button) findViewById(R.id.coordinator);
         tvBtn.setOnClickListener(this);
         recyclerBtn.setOnClickListener(this);
         gridButton.setOnClickListener(this);
+        staggerButton.setOnClickListener(this);
         contraintBtn.setOnClickListener(this);
         coordinatorBtn.setOnClickListener(this);
     }
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (v == gridButton) {
             Intent intent = new Intent(this, GridActivity.class);
+            startActivity(intent);
+        } else if (v == staggerButton) {
+            Intent intent = new Intent(this, StaggerActivity.class);
             startActivity(intent);
         } else if (v == contraintBtn) {
 
