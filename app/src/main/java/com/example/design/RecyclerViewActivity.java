@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.design.recycler.LineDecoration;
 import com.example.design.recycler.RecyclerAdapter;
 
 public class RecyclerViewActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new LineDecoration());
         recyclerView.setAdapter(new RecyclerAdapter(this));
     }
 }

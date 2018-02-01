@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.design.recycler.GridItemDecoration;
 import com.example.design.recycler.GridRecyclerAdapter;
 
 public class GridActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class GridActivity extends AppCompatActivity {
                 }
             }
         });
+        recyclerView.addItemDecoration(new GridItemDecoration());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(new GridRecyclerAdapter(this));
     }
