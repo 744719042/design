@@ -6,37 +6,37 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
 
-        <Button
-            android:id="@+id/add"
-            android:text="添加"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <!--<Button-->
+            <!--android:id="@+id/add"-->
+            <!--android:text="添加"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
 
-        <Button
-            android:id="@+id/delete"
-            android:text="删除"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <!--<Button-->
+            <!--android:id="@+id/delete"-->
+            <!--android:text="删除"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
 
-        <Button
-            android:id="@+id/update"
-            android:text="更新"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <!--<Button-->
+            <!--android:id="@+id/update"-->
+            <!--android:text="更新"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
 
-        <Button
-            android:id="@+id/exchange"
-            android:text="交换"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <!--<Button-->
+            <!--android:id="@+id/exchange"-->
+            <!--android:text="交换"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -53,15 +53,27 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <!--<Button-->
+            <!--android:id="@+id/batchAdd"-->
+            <!--android:text="批量添加"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/batchDelete"-->
+            <!--android:text="批量删除"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
         <Button
-            android:id="@+id/batchAdd"
-            android:text="批量添加"
+            android:id="@+id/batchUpdate"
+            android:text="批量更新"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/batchDelete"
-            android:text="批量删除"
+            android:id="@+id/batchUpdate2"
+            android:text="批量更新2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

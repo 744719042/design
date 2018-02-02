@@ -50,4 +50,26 @@ public class User {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (portrait != user.portrait) return false;
+        if (type != user.type) return false;
+        if (!name.equals(user.name)) return false;
+        return desc.equals(user.desc);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = portrait;
+        result = 31 * result + name.hashCode();
+        result = 31 * result + desc.hashCode();
+        result = 31 * result + type;
+        return result;
+    }
 }
