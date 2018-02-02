@@ -1,5 +1,6 @@
 package com.example.design.adapter;
 
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
@@ -69,5 +70,30 @@ public class HeaderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public int getItemCount() {
         return mWrapperAdapter.getItemCount() + mHeaderViews.size() + mFooterViews.size();
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+        RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+        if (layoutManager instanceof GridLayoutManager) {
+            final GridLayoutManager gridLayoutManager = new GridLayoutManager(recyclerView.getContext(),
+                    ((GridLayoutManager) layoutManager).getSpanCount());
+            final GridLayoutManager.SpanSizeLookup spanSizeLookup = ((GridLayoutManager) layoutManager).getSpanSizeLookup();
+            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+                @Override
+                public int getSpanSize(int position) {
+                    if (position < mHeaderViews.size()) {
+                        return gridLayoutManager.getSpanCount();
+                    } else if (position < mHeaderViews.size() + mWrapperAdapter.getItemCount()) {
+                        return spanSizeLookup.getSpanSize(position);
+                    } else {
+                        return gridLayoutManager.getSpanCount();
+                    }
+                }
+            });
+
+            recyclerView.setLayoutManager(gridLayoutManager);
+        }
     }
 }

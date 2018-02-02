@@ -21,7 +21,8 @@
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".GridActivity" />
         <activity android:name=".StaggerActivity" />
-        <activity android:name=".HeaderActivity"></activity>
+        <activity android:name=".HeaderActivity" />
+        <activity android:name=".HeaderGridActivity"></activity>
     </application>
 
 </manifest>
