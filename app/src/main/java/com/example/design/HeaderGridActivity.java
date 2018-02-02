@@ -3,12 +3,11 @@ package com.example.design;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import com.example.design.recycler.GridItemDecoration;
-import com.example.design.recycler.GridRecyclerAdapter;
+import com.example.design.recycler.GroupRecyclerAdapter;
 import com.example.design.widget.HeaderRecyclerView;
 
 public class HeaderGridActivity extends AppCompatActivity {
@@ -22,7 +21,7 @@ public class HeaderGridActivity extends AppCompatActivity {
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
-                if (GridRecyclerAdapter.users.get(position - recyclerView.getHeaderCount()).isHuman()) {
+                if (GroupRecyclerAdapter.users.get(position - recyclerView.getHeaderCount()).isHuman()) {
                     return 1;
                 } else {
                     return 3;
@@ -31,7 +30,7 @@ public class HeaderGridActivity extends AppCompatActivity {
         });
         recyclerView.addItemDecoration(new GridItemDecoration());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new GridRecyclerAdapter(this));
+        recyclerView.setAdapter(new GroupRecyclerAdapter(this));
         LayoutInflater inflater = LayoutInflater.from(this);
         View header1 = inflater.inflate(R.layout.header_view_1, recyclerView, false);
         recyclerView.addHeaderView(R.id.header_view_1, header1);

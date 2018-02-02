@@ -22,7 +22,8 @@
         <activity android:name=".GridActivity" />
         <activity android:name=".StaggerActivity" />
         <activity android:name=".HeaderActivity" />
-        <activity android:name=".HeaderGridActivity"></activity>
+        <activity android:name=".HeaderGridActivity" />
+        <activity android:name=".StickHeaderActivity"></activity>
     </application>
 
 </manifest>

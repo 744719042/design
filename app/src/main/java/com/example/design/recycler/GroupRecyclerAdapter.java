@@ -16,7 +16,7 @@ import java.util.List;
  * Created by Administrator on 2018/2/1.
  */
 
-public class GridRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class GroupRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public static List<User> users = new ArrayList<User>() {
         {
             add(new User("蜀国"));
@@ -38,7 +38,7 @@ public class GridRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private Context context;
     private LayoutInflater inflater;
 
-    public GridRecyclerAdapter(Context context) {
+    public GroupRecyclerAdapter(Context context) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
     }

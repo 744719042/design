@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import com.example.design.recycler.GridItemDecoration;
-import com.example.design.recycler.GridRecyclerAdapter;
+import com.example.design.recycler.GroupRecyclerAdapter;
 
 public class StaggerActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -19,6 +19,6 @@ public class StaggerActivity extends AppCompatActivity {
                 new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.addItemDecoration(new GridItemDecoration());
-        recyclerView.setAdapter(new GridRecyclerAdapter(this));
+        recyclerView.setAdapter(new GroupRecyclerAdapter(this));
     }
 }

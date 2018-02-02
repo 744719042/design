@@ -6,7 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.design.recycler.GridItemDecoration;
-import com.example.design.recycler.GridRecyclerAdapter;
+import com.example.design.recycler.GroupRecyclerAdapter;
 
 public class GridActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -19,7 +19,7 @@ public class GridActivity extends AppCompatActivity {
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
-                if (GridRecyclerAdapter.users.get(position).isHuman()) {
+                if (GroupRecyclerAdapter.users.get(position).isHuman()) {
                     return 1;
                 } else {
                     return 3;
@@ -28,6 +28,6 @@ public class GridActivity extends AppCompatActivity {
         });
         recyclerView.addItemDecoration(new GridItemDecoration());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new GridRecyclerAdapter(this));
+        recyclerView.setAdapter(new GroupRecyclerAdapter(this));
     }
 }

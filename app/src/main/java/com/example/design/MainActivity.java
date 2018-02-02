@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button staggerButton;
     private Button headerButton;
     private Button headerGridButton;
+    private Button stickHeaderButton;
     private Button contraintBtn;
     private Button coordinatorBtn;
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         staggerButton = (Button) findViewById(R.id.staggerView);
         headerButton = (Button) findViewById(R.id.headerRecyclerView);
         headerGridButton = (Button) findViewById(R.id.headerGridView);
+        stickHeaderButton = (Button) findViewById(R.id.stickheader);
         contraintBtn = (Button) findViewById(R.id.constraint);
         coordinatorBtn = (Button) findViewById(R.id.coordinator);
         tvBtn.setOnClickListener(this);
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         staggerButton.setOnClickListener(this);
         headerButton.setOnClickListener(this);
         headerGridButton.setOnClickListener(this);
+        stickHeaderButton.setOnClickListener(this);
         contraintBtn.setOnClickListener(this);
         coordinatorBtn.setOnClickListener(this);
     }
@@ -58,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (v == headerGridButton) {
             Intent intent = new Intent(this, HeaderGridActivity.class);
+            startActivity(intent);
+        } else if (v == stickHeaderButton) {
+            Intent intent = new Intent(this, StickHeaderActivity.class);
             startActivity(intent);
         } else if (v == contraintBtn) {
 
