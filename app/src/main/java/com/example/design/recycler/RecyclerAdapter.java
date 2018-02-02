@@ -2,6 +2,8 @@ package com.example.design.recycler;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.SparseArray;
+import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +19,7 @@ import java.util.List;
  */
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
-    private List<User> users = new ArrayList<User>() {
+    public static List<User> users = new ArrayList<User>() {
         {
             add(new User(R.drawable.beach, "刘备", "唯贤唯德，能服于人"));
             add(new User(R.drawable.bamboo, "诸葛亮", "淡泊以明志，宁静以致远"));
@@ -31,6 +33,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
             add(new User(R.drawable.pool, "吕蒙", "士别三日当刮目相待"));
         }
     };
+
+    public static SparseArray<String> groups = new SparseArray<>();
+
+    static {
+        groups.put(0, "蜀国");
+        groups.put(1, "魏国");
+        groups.put(2, "吴国");
+    }
 
     private Context context;
     private LayoutInflater inflater;
