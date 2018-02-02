@@ -20,7 +20,8 @@
         <activity android:name=".TextViewActivity" />
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".GridActivity" />
-        <activity android:name=".StaggerActivity"></activity>
+        <activity android:name=".StaggerActivity" />
+        <activity android:name=".HeaderActivity"></activity>
     </application>
 
 </manifest>

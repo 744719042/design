@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="header_view_1" type="id" />
+    <item name="header_view_2" type="id" />
+    <item name="footer_view_1" type="id" />
+    <item name="footer_view_2" type="id" />
+</resources>

@@ -33,7 +33,7 @@ public class LineDecoration extends RecyclerView.ItemDecoration {
         for (int i = 0; i < count; i++) {
             View view = parent.getChildAt(i);
             int bottom = view.getBottom();
-            c.drawRect(parent.getPaddingLeft(), bottom - CommonUtils.dp2px(25),
+            c.drawRect(parent.getPaddingLeft(), bottom,
                     parent.getWidth() - parent.getPaddingRight(), bottom + CommonUtils.dp2px(5), paint);
         }
     }

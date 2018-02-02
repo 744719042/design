@@ -16,7 +16,7 @@ public class StaggerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stagger);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         StaggeredGridLayoutManager staggeredGridLayoutManager =
-                new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.HORIZONTAL);
+                new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.addItemDecoration(new GridItemDecoration());
         recyclerView.setAdapter(new GridRecyclerAdapter(this));

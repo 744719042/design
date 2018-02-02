@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button recyclerBtn;
     private Button gridButton;
     private Button staggerButton;
+    private Button headerButton;
     private Button contraintBtn;
     private Button coordinatorBtn;
 
@@ -23,12 +24,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerBtn = (Button) findViewById(R.id.recyclerView);
         gridButton = (Button) findViewById(R.id.gridLayout);
         staggerButton = (Button) findViewById(R.id.staggerView);
+        headerButton = (Button) findViewById(R.id.headerRecyclerView);
         contraintBtn = (Button) findViewById(R.id.constraint);
         coordinatorBtn = (Button) findViewById(R.id.coordinator);
         tvBtn.setOnClickListener(this);
         recyclerBtn.setOnClickListener(this);
         gridButton.setOnClickListener(this);
         staggerButton.setOnClickListener(this);
+        headerButton.setOnClickListener(this);
         contraintBtn.setOnClickListener(this);
         coordinatorBtn.setOnClickListener(this);
     }
@@ -46,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (v == staggerButton) {
             Intent intent = new Intent(this, StaggerActivity.class);
+            startActivity(intent);
+        } else if (v == headerButton) {
+            Intent intent = new Intent(this, HeaderActivity.class);
             startActivity(intent);
         } else if (v == contraintBtn) {
 
