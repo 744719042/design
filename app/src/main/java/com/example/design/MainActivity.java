@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button tvBtn;
@@ -15,7 +14,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button headerButton;
     private Button headerGridButton;
     private Button stickHeaderButton;
-    private Button contraintBtn;
+    private Button updateButton;
+    private Button constraintBtn;
     private Button coordinatorBtn;
 
     @Override
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         headerButton = (Button) findViewById(R.id.headerRecyclerView);
         headerGridButton = (Button) findViewById(R.id.headerGridView);
         stickHeaderButton = (Button) findViewById(R.id.stickheader);
-        contraintBtn = (Button) findViewById(R.id.constraint);
+        updateButton = (Button) findViewById(R.id.updateButton);
+        constraintBtn = (Button) findViewById(R.id.constraint);
         coordinatorBtn = (Button) findViewById(R.id.coordinator);
         tvBtn.setOnClickListener(this);
         recyclerBtn.setOnClickListener(this);
@@ -38,7 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         headerButton.setOnClickListener(this);
         headerGridButton.setOnClickListener(this);
         stickHeaderButton.setOnClickListener(this);
-        contraintBtn.setOnClickListener(this);
+        updateButton.setOnClickListener(this);
+        constraintBtn.setOnClickListener(this);
         coordinatorBtn.setOnClickListener(this);
     }
 
@@ -65,7 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == stickHeaderButton) {
             Intent intent = new Intent(this, StickHeaderActivity.class);
             startActivity(intent);
-        } else if (v == contraintBtn) {
+        } else if (v == updateButton) {
+            Intent intent = new Intent(this, UpdateActivity.class);
+            startActivity(intent);
+        } else if (v == constraintBtn) {
 
         } else if (v == coordinatorBtn) {
 
