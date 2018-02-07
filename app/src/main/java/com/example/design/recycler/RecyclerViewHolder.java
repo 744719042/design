@@ -13,9 +13,9 @@ import com.example.design.model.User;
  */
 
 public class RecyclerViewHolder extends RecyclerView.ViewHolder {
-    private ImageView portrait;
-    private TextView name;
-    private TextView desc;
+    ImageView portrait;
+    TextView name;
+    TextView desc;
 
     public RecyclerViewHolder(View itemView) {
         super(itemView);

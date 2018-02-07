@@ -1,8 +1,10 @@
 package com.example.design.recycler;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
+import android.util.ArrayMap;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +14,9 @@ import com.example.design.R;
 import com.example.design.model.User;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2018/2/1.
@@ -74,6 +78,28 @@ public class DiffRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     }
 
     @Override
+    public void onBindViewHolder(RecyclerViewHolder holder, int position, List<Object> payloads) {
+        if (payloads.isEmpty()) {
+            super.onBindViewHolder(holder, position, payloads);
+        } else {
+            Map<Integer, String> map = (Map<Integer, String>) payloads.get(0);
+            for (int strId : map.keySet()) {
+                switch (strId) {
+                    case R.id.name_attr:
+                        holder.name.setText(map.get(R.id.name_attr));
+                        break;
+                    case R.id.desc_attr:
+                        holder.desc.setText(map.get(R.id.desc_attr));
+                        break;
+                    case R.id.portrait_attr:
+                        holder.portrait.setImageResource(Integer.parseInt(map.get(R.id.portrait_attr)));
+                        break;
+                }
+            }
+        }
+    }
+
+    @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         holder.bindView(data.get(position));
     }
@@ -108,6 +134,28 @@ public class DiffRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder
                 User user = users.get(oldItemPosition);
                 User newUser = userList.get(newItemPosition);
                 return user.equals(newUser);
+            }
+
+            @Nullable
+            @Override
+            public Object getChangePayload(int oldItemPosition, int newItemPosition) {
+                User user = users.get(oldItemPosition);
+                User newUser = userList.get(newItemPosition);
+
+                Map<Integer, String> map = new HashMap<>();
+                if (!user.getName().equalsIgnoreCase(newUser.getName())) {
+                    map.put(R.id.name_attr, newUser.getName());
+                }
+
+                if (!user.getDesc().equalsIgnoreCase(newUser.getDesc())) {
+                    map.put(R.id.desc_attr, newUser.getDesc());
+                }
+
+                if (user.getPortrait() != newUser.getPortrait()) {
+                    map.put(R.id.portrait_attr, String.valueOf(newUser.getPortrait()));
+                }
+
+                return map;
             }
         }, true);
 

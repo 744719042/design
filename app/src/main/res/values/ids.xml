@@ -4,4 +4,8 @@
     <item name="header_view_2" type="id" />
     <item name="footer_view_1" type="id" />
     <item name="footer_view_2" type="id" />
+
+    <item name="name_attr" type="id" />
+    <item name="desc_attr" type="id" />
+    <item name="portrait_attr" type="id" />
 </resources>
