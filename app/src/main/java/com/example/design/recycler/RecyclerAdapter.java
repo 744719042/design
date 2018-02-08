@@ -1,6 +1,7 @@
 package com.example.design.recycler;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
@@ -51,7 +52,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
     }
 
     @Override
-    public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         View itemView = inflater.inflate(R.layout.user_item, parent, false);
         return new RecyclerViewHolder(itemView);
     }

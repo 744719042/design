@@ -71,9 +71,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, UpdateActivity.class);
             startActivity(intent);
         } else if (v == constraintBtn) {
-
+            Intent intent = new Intent(this, ConstraintActivity.class);
+            startActivity(intent);
         } else if (v == coordinatorBtn) {
-
+            Intent intent = new Intent(this, CoordinatorActivity.class);
+            startActivity(intent);
         }
     }
 }
