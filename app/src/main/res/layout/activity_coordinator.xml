@@ -24,20 +24,18 @@
             <ImageView
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="0.1"
+                app:layout_collapseParallaxMultiplier="0.9"
                 android:src="@drawable/mountain"
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:layout_collapseMode="pin"
+            <FrameLayout
+                android:id="@+id/layout"
+                android:layout_gravity="bottom|center_horizontal"
+                app:layout_collapseMode="parallax"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:titleTextColor="@color/colorAccent">
-
-            </android.support.v7.widget.Toolbar>
+                android:layout_height="100dp">
+            </FrameLayout>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -50,6 +48,38 @@
         android:layout_height="match_parent">
 
     </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title=""
+        app:layout_anchor="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textview"
+        android:textSize="25sp"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_behavior="@string/share_behavior"
+        android:text="@string/name_list"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <com.example.design.widget.CircleImageView
+        android:id="@+id/image"
+        android:scaleType="centerCrop"
+        app:layout_behavior="@string/drawable_behavior"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/waterfall"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatButton"

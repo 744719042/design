@@ -2,4 +2,6 @@
     <string name="app_name">design开发与测试</string>
     <string name="three_kingdoms">三国群英传</string>
     <string name="share_behavior" translatable="false">com.example.design.CoordinatorActivity$MessageBehavior</string>
+    <string name="drawable_behavior" translatable="false">com.example.design.CoordinatorActivity$DrawableBehavior</string>
+    <string name="name_list">人物篇</string>
 </resources>
