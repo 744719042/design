@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button headerGridButton;
     private Button stickHeaderButton;
     private Button updateButton;
+    private Button dragButton;
     private Button constraintBtn;
     private Button coordinatorBtn;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         headerGridButton = (Button) findViewById(R.id.headerGridView);
         stickHeaderButton = (Button) findViewById(R.id.stickheader);
         updateButton = (Button) findViewById(R.id.updateButton);
+        dragButton = (Button) findViewById(R.id.drag);
         constraintBtn = (Button) findViewById(R.id.constraint);
         coordinatorBtn = (Button) findViewById(R.id.coordinator);
         tvBtn.setOnClickListener(this);
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         headerGridButton.setOnClickListener(this);
         stickHeaderButton.setOnClickListener(this);
         updateButton.setOnClickListener(this);
+        dragButton.setOnClickListener(this);
         constraintBtn.setOnClickListener(this);
         coordinatorBtn.setOnClickListener(this);
     }
@@ -69,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (v == updateButton) {
             Intent intent = new Intent(this, UpdateActivity.class);
+            startActivity(intent);
+        } else if (v == dragButton) {
+            Intent intent = new Intent(this, DragActivity.class);
             startActivity(intent);
         } else if (v == constraintBtn) {
             Intent intent = new Intent(this, ConstraintActivity.class);

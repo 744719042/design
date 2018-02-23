@@ -28,12 +28,12 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
 
     public void bindView(final User user) {
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(itemView, user.getDesc(), Snackbar.LENGTH_LONG).setAction("确定", null).show();
-            }
-        });
+//        itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Snackbar.make(itemView, user.getDesc(), Snackbar.LENGTH_LONG).setAction("确定", null).show();
+//            }
+//        });
         name.setText(user.getName());
         desc.setText(user.getDesc());
         portrait.setImageResource(user.getPortrait());

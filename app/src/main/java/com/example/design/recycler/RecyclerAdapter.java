@@ -68,4 +68,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
     }
 
 
+    public List<?> getData() {
+        return users;
+    }
 }

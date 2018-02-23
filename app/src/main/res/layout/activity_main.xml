@@ -65,6 +65,13 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/drag"
+        android:text="RecyclerView拖动"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
         android:id="@+id/constraint"
         android:text="Constraint测试"
         android:textAllCaps="false"

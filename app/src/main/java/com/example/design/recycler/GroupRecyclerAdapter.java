@@ -19,16 +19,16 @@ import java.util.List;
 public class GroupRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public static List<User> users = new ArrayList<User>() {
         {
-            add(new User("蜀国"));
+//            add(new User("蜀国"));
             add(new User(R.drawable.beach, "刘备", "唯贤唯德，能服于人"));
             add(new User(R.drawable.bamboo, "诸葛亮", "淡泊以明志，宁静以致远"));
             add(new User(R.drawable.road, "关羽", "安能与老兵同列"));
             add(new User(R.drawable.flower, "赵云", "子龙一身是胆"));
-            add(new User("魏国"));
+//            add(new User("魏国"));
             add(new User(R.drawable.lake, "曹操", "宁教我负天下人，不教天下人负我"));
             add(new User(R.drawable.rain, "司马懿", "老而不死是为贼"));
             add(new User(R.drawable.sea, "司马昭", "司马昭之心路人皆知"));
-            add(new User("吴国"));
+//            add(new User("吴国"));
             add(new User(R.drawable.moon, "孙权", "生子当如孙仲谋"));
             add(new User(R.drawable.peach, "周瑜", "既生瑜何生亮"));
             add(new User(R.drawable.pool, "吕蒙", "士别三日当刮目相待"));
@@ -78,5 +78,9 @@ public class GroupRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
         } else {
             return R.layout.state_item;
         }
+    }
+
+    public List<?> getData() {
+        return users;
     }
 }

@@ -25,11 +25,14 @@
         <activity android:name=".HeaderGridActivity" />
         <activity android:name=".StickHeaderActivity" />
         <activity android:name=".UpdateActivity" />
-        <activity android:name=".ConstraintActivity" />
-        <activity android:name=".CoordinatorActivity"
+        <activity
+            android:name=".ConstraintActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".CoordinatorActivity"
             android:label="@string/three_kingdoms"
-            android:theme="@style/BaseAppTheme">
-        </activity>
+            android:theme="@style/BaseAppTheme"></activity>
+        <activity android:name=".DragActivity"></activity>
     </application>
 
 </manifest>
