@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button dragButton;
     private Button constraintBtn;
     private Button coordinatorBtn;
+    private Button actionBar;
+    private Button toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dragButton.setOnClickListener(this);
         constraintBtn.setOnClickListener(this);
         coordinatorBtn.setOnClickListener(this);
+        actionBar = (Button) findViewById(R.id.actionBar);
+        actionBar.setOnClickListener(this);
+        toolbar = (Button) findViewById(R.id.toolbar);
+        toolbar.setOnClickListener(this);
     }
 
     @Override
@@ -81,6 +87,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (v == coordinatorBtn) {
             Intent intent = new Intent(this, CoordinatorActivity.class);
+            startActivity(intent);
+        } else if (v == actionBar) {
+            Intent intent = new Intent(this, ActionBarActivity.class);
+            startActivity(intent);
+        } else if (v == toolbar) {
+            Intent intent = new Intent(this, ToolbarActivity.class);
             startActivity(intent);
         }
     }

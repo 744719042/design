@@ -31,8 +31,13 @@
         <activity
             android:name=".CoordinatorActivity"
             android:label="@string/three_kingdoms"
-            android:theme="@style/BaseAppTheme"></activity>
-        <activity android:name=".DragActivity"></activity>
+            android:theme="@style/BaseAppTheme" />
+        <activity android:name=".DragActivity" />
+        <activity android:name=".ActionBarActivity">
+        </activity>
+        <activity android:name=".ToolbarActivity">
+
+        </activity>
     </application>
 
 </manifest>
