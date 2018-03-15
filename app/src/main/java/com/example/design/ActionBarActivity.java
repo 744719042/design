@@ -38,7 +38,7 @@ public class ActionBarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_bar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);
 //        getSupportActionBar().setLogo(R.drawable.ic_camera_alt_black);
 //        getSupportActionBar().setDisplayUseLogoEnabled(true);
@@ -72,6 +72,9 @@ public class ActionBarActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             Toast.makeText(getApplicationContext(), "点击Home", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (item.getItemId() == R.id.action_share) {
+            Toast.makeText(getApplicationContext(), "点击共享", Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onOptionsItemSelected(item);

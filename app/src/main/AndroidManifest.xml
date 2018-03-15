@@ -13,7 +13,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -35,7 +34,8 @@
         <activity android:name=".DragActivity" />
         <activity android:name=".ActionBarActivity">
         </activity>
-        <activity android:name=".ToolbarActivity">
+        <activity android:name=".ToolbarActivity"
+            android:theme="@style/BaseAppTheme">
 
         </activity>
     </application>

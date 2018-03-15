@@ -31,8 +31,9 @@ public class FileActionProvider extends ActionProvider {
     @Override
     public View onCreateActionView() {
         final ImageView imageView = new ImageView(getContext());
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(CommonUtils.dp2px(30), CommonUtils.dp2px(30));
+        ActionBar.LayoutParams params = new ActionBar.LayoutParams(CommonUtils.dp2px(40), CommonUtils.dp2px(25));
         imageView.setLayoutParams(params);
+        imageView.setPadding(0, 0, CommonUtils.dp2px(15), 0);
         imageView.setImageResource(R.drawable.peach);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
