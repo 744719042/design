@@ -79,20 +79,20 @@ public class UserFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         if (WEI.equalsIgnoreCase(state)) {
             inflater.inflate(R.menu.wei, menu);
-            SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    Toast.makeText(getActivity().getApplicationContext(), query, Toast.LENGTH_SHORT).show();
-                    return false;
-                }
-
-                @Override
-                public boolean onQueryTextChange(String newText) {
-                    return false;
-                }
-            });
-            searchView.setSubmitButtonEnabled(true);
+//            SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+//            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//                @Override
+//                public boolean onQueryTextSubmit(String query) {
+//                    Toast.makeText(getActivity().getApplicationContext(), query, Toast.LENGTH_SHORT).show();
+//                    return false;
+//                }
+//
+//                @Override
+//                public boolean onQueryTextChange(String newText) {
+//                    return false;
+//                }
+//            });
+//            searchView.setSubmitButtonEnabled(true);
         } else if (SHU.equalsIgnoreCase(state)) {
             inflater.inflate(R.menu.shu, menu);
             MenuItem menuItem = menu.findItem(R.id.action_file);
